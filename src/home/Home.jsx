@@ -5,9 +5,6 @@ import Footer from '../footer/Footer';
 import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
-    const data = useLoaderData();
-    console.log(data)
-
     return (
         <div className='lg:px-24 lg:py-4 bg-indigo-50'>
             <Header></Header>
