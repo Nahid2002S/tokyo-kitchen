@@ -9,9 +9,10 @@ const Header = () => {
     <a className="btn btn-ghost normal-case text-2xl font-bold text-silver-900">TOKYO KITCHEN</a>
   </div>
   <div className="flex-none gap-2">
-    <div className='lg:pr-12 flex gap-2 md:gap-10 font-semibold text-black'>
+    <div className='lg:pr-12 flex items-center gap-2 md:gap-10 font-semibold text-black'>
     <Link to="/">Home</Link>
     <Link to="/blogs">Blogs</Link>
+    <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
     </div>
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

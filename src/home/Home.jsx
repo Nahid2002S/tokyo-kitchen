@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from '../header/Header';
-import Banner from '../banner/Banner';
 import Footer from '../footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     const data = useLoaderData();
