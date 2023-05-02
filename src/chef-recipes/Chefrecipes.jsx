@@ -7,7 +7,7 @@ const Chefrecipes = () => {
     const {id} = useParams();
     const chefRecipes = useLoaderData();
     console.log(chefRecipes)
-    const {picture, name, experience, recipes, likes, bio, making_details} = chefRecipes;
+    const {picture, name, experience, recipes, likes, bio} = chefRecipes;
    
     return (
         <div>
@@ -23,7 +23,7 @@ const Chefrecipes = () => {
   </div>
   <div className='lg:flex gap-4 px-8'>
     {
-        recipes.map(recipe => <Recipe recipe={recipe} key={recipe.id}></Recipe>)
+        recipes.map(recipe => <Recipe recipe={recipe} key={recipe.unique_key}></Recipe>)
       }
 </div>
    </div>

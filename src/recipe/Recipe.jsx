@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Recipe = ({recipe}) => {
-    const {name, ingredients, picture, making_details, rating} = recipe;
+    const {name, ingredients, picture, making_details, rating, id} = recipe;
 
     const addToFavourite = () =>{
       toast('Add To Favourite')
@@ -16,7 +16,7 @@ const Recipe = ({recipe}) => {
     <h2 className="card-title">Recipe Name : {name}</h2>
     <p>Ingredients: 
         {
-            ingredients.map(i => <li>{i.ingredients_name}</li>)
+            ingredients.map(i => <li key={i._id}>{i.ingredients_name}</li>)
         }
     </p>
     <p>Cooking Method: {making_details}</p>

@@ -13,6 +13,7 @@ const Home = () => {
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
