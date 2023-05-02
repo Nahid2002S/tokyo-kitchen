@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-indigo-400">
+            <div className="navbar bg-indigo-300 lg:px-12">
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-2xl font-bold text-silver-900">TOKYO KITCHEN</a>
   </div>
   <div className="flex-none gap-2">
-    <div className='lg:pr-12 flex gap-10 font-semibold text-black'>
+    <div className='lg:pr-12 flex gap-2 md:gap-10 font-semibold text-black'>
     <Link to="/">Home</Link>
     <Link to="/blogs">Blogs</Link>
     </div>

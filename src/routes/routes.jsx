@@ -1,11 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Home/Home";
+import Banner from "../banner/Banner";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Home></Home>,
-      loader: () => fetch('https://assignment-10-server-nahid2002s.vercel.app/chefs')
+      children: [
+        {
+            path: '/',
+            element: <Banner></Banner>
+        }
+      ]
     },
   ]);
 
