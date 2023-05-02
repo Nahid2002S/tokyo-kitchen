@@ -5,8 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const Recipe = ({recipe}) => {
     const {name, ingredients, picture, making_details, rating, id} = recipe;
 
-    const addToFavourite = () =>{
-      toast('Add To Favourite')
+    const addToFavourite = (event) =>{
+      toast('The recipe is your favorite');
+      event.currentTarget.disabled = true;
     }
     return (
         <div>
