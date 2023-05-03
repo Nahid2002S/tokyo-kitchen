@@ -1,11 +1,11 @@
 import React from 'react';
-import bannerImage from '../assets/chef.png'
+import bannerImage from '../assets/banner.png'
 import Chefs from '../chefs/chefs';
 
 const Banner = () => {
     return (
         <div>
-            <div className='bg-indigo-300 mt-4 lg:px-16 '>
+            <div className='bg-indigo-300 mt-4 lg:px-16 lg:py-8'>
             <div className='lg:flex items-center'>
             <div>
                 <h1 className='text-6xl font-bold mb-6 text-indigo-600'><span className='text-indigo-700'>TOKYO</span> KITCHEN</h1>
@@ -13,7 +13,7 @@ const Banner = () => {
                 <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">View More</button>
             </div>
             <div className='z-[2]'>
-              <img src={bannerImage} alt="" className="lg:w-[1200px]" />
+              <img src={bannerImage} alt="" />
             </div>
         </div>
         </div>
