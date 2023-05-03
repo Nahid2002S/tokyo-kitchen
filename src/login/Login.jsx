@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authprovider/AuthProvider';
 
 const Login = () => {
 
-    const {loginUser} = useContext(AuthContext);
+    const {loginUser, googleAuth} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -26,6 +26,16 @@ const Login = () => {
         })
     }
 
+    const handleGoogleLogin =() =>{
+        googleAuth()
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+    }
+
     return (
         <div className='px-8 py-6 bg-indigo-300 w-[35%] mx-auto mt-6 rounded-md'>
             <h3 className='text-center text-3xl font-semibold mb-6 '>Please <span className='text-indigo-700'>Login!!!</span></h3>
@@ -38,7 +48,7 @@ const Login = () => {
                 </label>
                 <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Login</button>
                 <hr />
-                <button className="btn btn-outline btn-primary">Login With Google</button>
+                <button onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Login With Google</button>
                 <button className="btn btn-outline btn-primary">Login With Github</button>
                 <p>New User? Create Account <Link to='/register' className='text-blue-800 underline font-semibold'>Register</Link></p>
             </form>
