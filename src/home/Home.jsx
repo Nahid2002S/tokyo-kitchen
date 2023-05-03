@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     return (
-        <div className='lg:px-24 lg:py-4 bg-indigo-50'>
+        <div className='lg:py-4 bg-neutral-900'>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>

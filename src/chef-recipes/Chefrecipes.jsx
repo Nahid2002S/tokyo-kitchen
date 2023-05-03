@@ -10,9 +10,9 @@ const Chefrecipes = () => {
     const {picture, name, experience, recipes, likes, bio} = chefRecipes;
    
     return (
-        <div>
-            <h3 className='mb-16 mt-8 text-center text-3xl font-semibold'>Chef Details And <span className='text-indigo-500'>Recipes</span></h3>
- <div className="card w-96 lg:w-[100%] bg-indigo-300 shadow-xl py-6">
+        <div className='lg:px-12 px-2'>
+            <h3 className='mb-16 mt-6 underline text-center text-3xl font-semibold text-indigo-500'>Chef Details And Recipes</h3>
+ <div className="card bg-indigo-300 shadow-xl py-6">
   <figure><img src={picture} alt="Shoes" className='w-96'/></figure>
   <div className="card-body">
     <h2 className="card-title">Chef Name: {name}</h2>

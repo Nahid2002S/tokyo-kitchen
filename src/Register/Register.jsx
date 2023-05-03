@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authprovider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
     const [error, setError] = useState('');
 
-    const {registerUser} = useContext(AuthContext);
+    const {registerUser, logOut} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = (event) =>{
         event.preventDefault();
@@ -27,11 +28,25 @@ const Register = () => {
         registerUser(email,password)
         .then(result => {
             console.log(result.user)
-            navigate('/');
+            navigate('/login');
+            updateUser(result.user, name, photoUrl)
         })
         .catch(err => {
             console.log(err.message)
         })
+
+        const updateUser = (user, name, photoUrl) =>{
+            updateProfile(user, {
+                displayName : name,
+                photoURL : photoUrl
+            })
+            .then(() => {
+                console.log('user name updated')
+            })
+            .catch(err =>{
+                console.log(err)
+            })
+        }      
     }
 
     return (
@@ -51,7 +66,7 @@ const Register = () => {
                 <input type="text" name="photo" id="photo" className='px-4 py-2 rounded-md w-full' placeholder='Photo URL' required/>
                 </label>
                 <p className='text-red-600 font-semibold'>{error}</p>
-                <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Register</button>
+                <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Register </button>
                 <p>Already have an account? <Link to='/login' className='text-blue-800 underline font-semibold'>Login</Link></p>
             </form>
         </div>

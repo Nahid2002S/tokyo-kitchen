@@ -29,7 +29,7 @@ const Login = () => {
     const handleGoogleLogin =() =>{
         googleAuth()
         .then(result =>{
-            console.log(result.user)
+            navigate(from, {replace : true})
         })
         .catch(err =>{
             console.log(err)
@@ -48,8 +48,8 @@ const Login = () => {
                 </label>
                 <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Login</button>
                 <hr />
-                <button onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Login With Google</button>
-                <button className="btn btn-outline btn-primary">Login With Github</button>
+                <Link onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Login With Google</Link>
+                <Link className="btn btn-outline btn-primary">Login With Github</Link>
                 <p>New User? Create Account <Link to='/register' className='text-blue-800 underline font-semibold'>Register</Link></p>
             </form>
         </div>

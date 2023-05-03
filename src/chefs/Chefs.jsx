@@ -11,8 +11,8 @@ const Chefs = () => {
     },[])
     console.log(chefs)
     return (
-        <div>
-            <h3 className='mb-8 mt-16 text-center text-3xl font-semibold underline'>Our <span className='text-indigo-500'>Chefs</span></h3>
+        <div className='lg:px-12 px-2'>
+            <h3 className='mb-8 mt-16 text-center text-3xl font-semibold underline text-indigo-500'>Our Chefs</h3>
             <div className='grid lg:grid-cols-3 gap-8'>
             {
                 chefs.map(chef => <Singlechef chef={chef} key={chef.id}></Singlechef>)

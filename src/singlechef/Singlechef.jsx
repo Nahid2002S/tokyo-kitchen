@@ -5,7 +5,7 @@ const Singlechef = ({chef}) => {
     const {picture, name, experience, recipes, likes, id} = chef;
     return (
         <div>
-            <div className="card w-88 lg:h-[600px] bg-indigo-300 shadow-xl">
+            <div className="card w-88 lg:h-[600px] bg-gradient-to-r from-indigo-400 to-indigo-300 shadow-xl">
   <figure><img src={picture} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Chef Name: {name}</h2>
