@@ -4,7 +4,7 @@ import { AuthContext } from '../authprovider/AuthProvider';
 
 const Login = () => {
 
-    const {loginUser, googleAuth} = useContext(AuthContext);
+    const {loginUser, googleAuth, githubAuth} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -35,6 +35,16 @@ const Login = () => {
             console.log(err)
         })
     }
+    const handleGithubLogin =() =>{
+        githubAuth()
+        .then(result =>{
+            console.log(result)
+            navigate(from, {replace : true})
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+    }
 
     return (
         <div className='px-8 py-6 bg-indigo-300 w-[35%] mx-auto mt-6 rounded-md'>
@@ -49,7 +59,7 @@ const Login = () => {
                 <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Login</button>
                 <hr />
                 <Link onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Login With Google</Link>
-                <Link className="btn btn-outline btn-primary">Login With Github</Link>
+                <Link onClick={handleGithubLogin} className="btn btn-outline btn-primary">Login With Github</Link>
                 <p>New User? Create Account <Link to='/register' className='text-blue-800 underline font-semibold'>Register</Link></p>
             </form>
         </div>

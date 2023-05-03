@@ -7,7 +7,7 @@ const Register = () => {
 
     const [error, setError] = useState('');
 
-    const {registerUser, logOut} = useContext(AuthContext);
+    const {registerUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = (event) =>{
         event.preventDefault();

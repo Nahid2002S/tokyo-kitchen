@@ -3,6 +3,7 @@ import Chefs from '../chefs/chefs';
 import Header from '../header/Header';
 import banner from '../assets/banner.jpg'
 import SignatureFood from '../signature-food/SignatureFood';
+import Resturant from '../resturant/resturant';
 
 const Banner = () => {
     return (
@@ -18,6 +19,7 @@ const Banner = () => {
         </div>
         <Chefs></Chefs>
         <SignatureFood></SignatureFood>
+        <Resturant></Resturant>
         </div>
     );
 };
