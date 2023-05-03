@@ -2,6 +2,7 @@ import React from 'react';
 import Chefs from '../chefs/chefs';
 import Header from '../header/Header';
 import banner from '../assets/banner.jpg'
+import SignatureFood from '../signature-food/SignatureFood';
 
 const Banner = () => {
     return (
@@ -16,6 +17,7 @@ const Banner = () => {
         </div>
         </div>
         <Chefs></Chefs>
+        <SignatureFood></SignatureFood>
         </div>
     );
 };
