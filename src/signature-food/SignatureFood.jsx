@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const SignatureFood = () => {
     return (
-        <div>
+        <div className='px-2'>
             <h3 className='mt-16 text-center text-3xl font-semibold text-indigo-500'>Japanese Signature Food</h3>
             <p className='mb-8 mt-2 text-center font-semibold text-indigo-500'>Lets See Some Japanese Best Food You Should Must <br /> Try This Food</p>
-            <div className="carousel w-96 lg:w-[100vh] mx-auto">
+            <div className="carousel lg:w-[100vh] mx-auto">
   <div id="item1" className="carousel-item w-full">
     <img src="https://img.freepik.com/free-photo/top-view-sushi-set-with-soy-sauce-chopsticks-wooden-serving-board_176474-3466.jpg?w=740&t=st=1683107356~exp=1683107956~hmac=c6b264c8b1ca1bad53d2d2d412b48a0384d1142e61bddbf2a83adb7e650cb02c" className="w-full" />
   </div> 
@@ -26,7 +26,7 @@ const SignatureFood = () => {
     <img src="https://img.freepik.com/free-photo/mixed-fried-meat-with-pomegranate-sauce_140725-3461.jpg?t=st=1683107818~exp=1683108418~hmac=5be5b293b5bf747a74275fe6797facf27ab79079bc8c291d23e2600641b735e0" className="w-full" />
   </div>
 </div> 
-<div className="flex justify-center w-full py-2 gap-2">
+<div className="flex flex-wrap justify-center w-full py-2 gap-2">
   <a href="#item1" className="btn btn-xs bg-primary">Tempura</a> 
   <a href="#item2" className="btn btn-xs bg-primary">Yakitori</a>
   <a href="#item3" className="btn btn-xs bg-primary">Sashimi</a> 

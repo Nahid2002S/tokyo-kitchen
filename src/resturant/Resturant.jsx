@@ -5,7 +5,7 @@ const Resturant = () => {
         <div>
             <h3 className='mt-16 text-center text-3xl font-semibold text-indigo-500'>Japanese Top Resturant</h3>
             <p className='mb-8 mt-2 text-center font-semibold text-indigo-500'>Japanese Resturants Are Very Clean An The Food Of Japanese <br /> Resturant is Very Healthy..</p>
-         <div className='grid lg:grid-cols-3 lg:px-12 px-2 gap-8'>
+         <div className='grid lg:grid-cols-3 lg:px-12 px-2 gap-8 justify-center'>
          <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
   <figure><img src="https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?w=740&t=st=1683109953~exp=1683110553~hmac=482db045753d685a98f5fa442e2f0a3b981890160a9365e9805f542eb9c4d5d2" alt="Shoes" /></figure>
   <div className="card-body">
@@ -28,7 +28,7 @@ const Resturant = () => {
     <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md mt-2">Explore</button>
   </div>
 </div>
-            <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
+    <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
   <figure><img src="https://img.freepik.com/free-photo/rustic-chandelier-made-bulbs-ropes-dining-table-vintage-kitchen_181624-9173.jpg?w=740&t=st=1683110907~exp=1683111507~hmac=144a2efa427d4220728ba04e92cbfc77327206a0fcf2205f49b9efe3228eacf2" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
@@ -49,7 +49,7 @@ const Resturant = () => {
     <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md mt-2">Explore</button>
   </div>
 </div>
-            <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
+  <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
   <figure><img src="https://img.freepik.com/free-photo/restaurant-hall-with-lots-table_140725-6309.jpg?w=740&t=st=1683111149~exp=1683111749~hmac=d50e3e0801217361524623d7e8676e9d9e77e68cc9f109eb5e94f501cb8786a3" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
