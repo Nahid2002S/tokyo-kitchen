@@ -6,6 +6,9 @@ const ref = React.createRef();
 const Blogs = () => {
     return (
         <div className='lg:px-16 px-2 mt-4'>
+            <Pdf targetRef={ref} filename="blogs.pdf">
+            {({ toPdf }) => <button onClick={toPdf} className="cursor-pointer px-4 py-2 rounded-md text-white font-semibold bg-gradient-to-r from-pink-600 to-indigo-700 mt-4 border-0 flex justify-center mx-auto">Download PDF</button>}
+           </Pdf>
             <div ref={ref}>
             <h3 className='mb-4 mt-6 text-center text-3xl font-semibold text-indigo-500'>Blogs</h3> <hr />
             <div className='bg-gradient-to-r from-pink-600 to-indigo-700 mb-2 rounded-md p-8 mt-6'>
@@ -25,9 +28,6 @@ const Blogs = () => {
                 <p className='font-bold text-sky-400'>A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code.</p>
             </div>
             </div>
-            <Pdf targetRef={ref} filename="blogs.pdf">
-            {({ toPdf }) => <button onClick={toPdf} className="cursor-pointer px-4 py-2 rounded-md text-white font-semibold bg-gradient-to-r from-pink-600 to-indigo-700 mt-4 border-0 flex justify-center mx-auto">Download PDF</button>}
-           </Pdf>
         </div>
     );
 };

@@ -26,7 +26,6 @@ const Register = () => {
 
         registerUser(email,password)
         .then(result => {
-            console.log(result.user)
             navigate('/login');
             updateUser(result.user, name, photoUrl)
         })
