@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../authprovider/AuthProvider';
-import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
     const [error, setError] = useState('');
 
-    const {registerUser} = useContext(AuthContext);
+    const {registerUser, updateUser} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = (event) =>{
         event.preventDefault();
@@ -33,20 +32,7 @@ const Register = () => {
         })
         .catch(err => {
             console.log(err.message)
-        })
-
-        const updateUser = (user, name, photoUrl) =>{
-            updateProfile(user, {
-                displayName : name,
-                photoURL : photoUrl
-            })
-            .then(() => {
-                console.log('user name updated')
-            })
-            .catch(err =>{
-                console.log(err)
-            })
-        }      
+        })     
     }
 
     return (

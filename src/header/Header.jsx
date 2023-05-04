@@ -45,13 +45,13 @@ const Header = () => {
   <div className="navbar-end">
   <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-success" data-tip={user?.displayName}>
         {
-          user ? <div className="w-10 rounded-full">
+          user?.photoURL ? <div className="w-10 rounded-full">
           <img src={user?.photoURL}/>
         </div> : ""
         }
       </label>
   {
-      user ? <button onClick={handleLogOut} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Logout </button> : <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
+      user?.displayName || user?.photoURL ? <button onClick={handleLogOut} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Logout </button> : <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
     }
     <div className="dropdown dropdown-end">
     </div>

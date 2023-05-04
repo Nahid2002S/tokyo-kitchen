@@ -9,6 +9,7 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
+    const [validuser, setValiduser] = useState(false);
 
     const registerUser = (email, password) =>{
         setLoading(true);
@@ -18,6 +19,19 @@ const AuthProvider = ({children}) => {
     const loginUser = (email, password) =>{
         return signInWithEmailAndPassword(auth, email, password)
     }
+
+    const updateUser = (user, name, photoUrl) =>{
+        updateProfile(user, {
+            displayName : name,
+            photoURL : photoUrl
+        })
+        .then(() => {
+            setLoading(true)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+    } 
 
     const logOut = () =>{
         return signOut(auth)
@@ -50,6 +64,7 @@ const AuthProvider = ({children}) => {
         loginUser,
         logOut,
         googleAuth,
+        updateUser,
         loading,
         githubAuth,
         user

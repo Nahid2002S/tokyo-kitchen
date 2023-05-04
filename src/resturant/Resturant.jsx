@@ -41,7 +41,7 @@ const Resturant = () => {
   </div>
 </div>
             <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
-  <figure><img LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/group-friends-eating-restaurant_23-2148006644.jpg?w=740&t=st=1683110991~exp=1683111591~hmac=b792b699e6f8f461fdb026abc0252ac286dc966c791efc58bc0a514cca00beab" alt="Shoes" /></figure>
+  <figure><LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/group-friends-eating-restaurant_23-2148006644.jpg?w=740&t=st=1683110991~exp=1683111591~hmac=b792b699e6f8f461fdb026abc0252ac286dc966c791efc58bc0a514cca00beab" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     Sushi Samurai
@@ -52,7 +52,7 @@ const Resturant = () => {
   </div>
 </div>
   <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
-  <figure><img LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-hall-with-lots-table_140725-6309.jpg?w=740&t=st=1683111149~exp=1683111749~hmac=d50e3e0801217361524623d7e8676e9d9e77e68cc9f109eb5e94f501cb8786a3" alt="Shoes" /></figure>
+  <figure><LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-hall-with-lots-table_140725-6309.jpg?w=740&t=st=1683111149~exp=1683111749~hmac=d50e3e0801217361524623d7e8676e9d9e77e68cc9f109eb5e94f501cb8786a3" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     Sumo Sushi Restaurant
@@ -63,7 +63,7 @@ const Resturant = () => {
   </div>
 </div>
             <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
-  <figure><img LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-interior_1127-3392.jpg?w=740&t=st=1683111083~exp=1683111683~hmac=a111c4df9ce7c20aa30d9670f43289d89c97afc3f0290185a9b35797c98819fe" alt="Shoes" /></figure>
+  <figure><LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-interior_1127-3392.jpg?w=740&t=st=1683111083~exp=1683111683~hmac=a111c4df9ce7c20aa30d9670f43289d89c97afc3f0290185a9b35797c98819fe" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     Nihombashi Kakigaracho Sugit
