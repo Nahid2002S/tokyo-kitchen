@@ -9,7 +9,6 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(false);
-    const [validuser, setValiduser] = useState(false);
 
     const registerUser = (email, password) =>{
         setLoading(true);
@@ -39,14 +38,12 @@ const AuthProvider = ({children}) => {
 
     const googleProvider = new GoogleAuthProvider();
     const googleAuth = () =>{
-        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
     const githubProvider = new GithubAuthProvider();
 
     const githubAuth = () =>{
-        setLoading(true);
         return signInWithPopup(auth, githubProvider);
     }
 

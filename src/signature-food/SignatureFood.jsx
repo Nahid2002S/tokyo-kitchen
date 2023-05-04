@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const SignatureFood = () => {
     return (
         <div className='px-2'>
-            <h3 className='mt-16 text-center text-3xl font-semibold text-indigo-500'>Japanese Signature Food</h3>
-            <p className='mb-8 mt-2 text-center font-semibold text-indigo-500'>Lets See Some Japanese Best Food You Should Must <br /> Try This Food</p>
+            <h3 className='mt-16 text-center text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-600'>Japanese Signature Food</h3>
+            <p className='mb-8 mt-2 text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-600'>Lets See Some Japanese Best Food You Should Must Try <br /> This Food</p>
             <div className="carousel lg:w-[100vh] mx-auto">
   <div id="item1" className="carousel-item w-full">
     <img src="https://img.freepik.com/free-photo/top-view-sushi-set-with-soy-sauce-chopsticks-wooden-serving-board_176474-3466.jpg?w=740&t=st=1683107356~exp=1683107956~hmac=c6b264c8b1ca1bad53d2d2d412b48a0384d1142e61bddbf2a83adb7e650cb02c" className="w-full" />
@@ -27,12 +27,12 @@ const SignatureFood = () => {
   </div>
 </div> 
 <div className="flex flex-wrap justify-center w-full py-2 gap-2">
-  <a href="#item1" className="btn btn-xs bg-primary">Tempura</a> 
-  <a href="#item2" className="btn btn-xs bg-primary">Yakitori</a>
-  <a href="#item3" className="btn btn-xs bg-primary">Sashimi</a> 
-  <a href="#item4" className="btn btn-xs bg-primary">Donburi</a>
-  <a href="#item5" className="btn btn-xs bg-primary">Oden</a>
-  <a href="#item6" className="btn btn-xs bg-primary">Tonkatsu</a>
+  <a href="#item1" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Tempura</a> 
+  <a href="#item2" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Yakitori</a>
+  <a href="#item3" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Sashimi</a> 
+  <a href="#item4" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Donburi</a>
+  <a href="#item5" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Oden</a>
+  <a href="#item6" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Tonkatsu</a>
 </div>
         </div>
     );
