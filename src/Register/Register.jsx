@@ -6,7 +6,7 @@ const Register = () => {
 
     const [error, setError] = useState('');
 
-    const {registerUser, updateUser} = useContext(AuthContext);
+    const {registerUser, updateUser, logOut} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = (event) =>{
         event.preventDefault();
@@ -26,6 +26,7 @@ const Register = () => {
 
         registerUser(email,password)
         .then(result => {
+            logOut()
             navigate('/login');
             updateUser(result.user, name, photoUrl)
         })
