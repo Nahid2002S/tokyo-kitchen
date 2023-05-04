@@ -7,6 +7,7 @@ import Chefrecipes from "../chef-recipes/Chefrecipes";
 import Chefs from "../chefs/chefs";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../errorpage/Errorpage";
+import Blogs from "../blogs/blogs";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             path: 'chef-recipes/:id',
             element: <PrivateRoute><Chefrecipes></Chefrecipes></PrivateRoute>,
             loader: ({params}) => fetch(`https://assignment-10-server-nahid2002s.vercel.app/chefs/${params.id}`)
+        },
+        {
+          path: '/blogs',
+          element: <Blogs></Blogs>
         }
       ]
     },

@@ -8,6 +8,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const [errors, setErrors] = useState("");
+
     const from = location.state?.from?.pathname || '/';
 
     const handleLogin = (event) =>{
@@ -16,13 +18,14 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
+        setErrors("");
+
         loginUser(email, password)
         .then(result => {
-            console.log(result.user)
             navigate(from, {replace : true})
         })
         .catch(err => {
-            console.log(err)
+            setErrors(err.message)
         })
     }
 
@@ -56,6 +59,7 @@ const Login = () => {
                 <label htmlFor="" className='text-xl font-semibold'>Password: <br />
                 <input type="password" name="password" id="password" className='px-4 py-2 rounded-md w-full' required />
                 </label>
+                <p className='font-semibold text-red-500'>{errors}</p>
                 <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md">Login</button>
                 <hr />
                 <Link onClick={handleGoogleLogin} className="btn btn-outline btn-primary">Login With Google</Link>
