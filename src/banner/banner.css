@@ -1,0 +1,12 @@
+#plate{
+    animation: plateAnim 1s linear infinite alternate;
+}
+
+@keyframes plateAnim{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.03);
+    }
+}

@@ -27,12 +27,12 @@ const SignatureFood = () => {
   </div>
 </div> 
 <div className="flex flex-wrap justify-center w-full py-2 gap-2">
-  <a href="#item1" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Tempura</a> 
-  <a href="#item2" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Yakitori</a>
-  <a href="#item3" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Sashimi</a> 
-  <a href="#item4" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Donburi</a>
-  <a href="#item5" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Oden</a>
-  <a href="#item6" className="btn btn-xs bg-gradient-to-r from-pink-700 to-indigo-800">Tonkatsu</a>
+  <a href="#item1" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Tempura</a> 
+  <a href="#item2" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Yakitori</a>
+  <a href="#item3" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Sashimi</a> 
+  <a href="#item4" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Donburi</a>
+  <a href="#item5" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Oden</a>
+  <a href="#item6" className="btn btn-xs bg-gradient-to-r from-pink-500 to-indigo-700">Tonkatsu</a>
 </div>
         </div>
     );
