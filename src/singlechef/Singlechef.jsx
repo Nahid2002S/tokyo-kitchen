@@ -9,7 +9,7 @@ const Singlechef = ({chef}) => {
     return (
         <div>
             <div className="card w-88 lg:h-[600px] bg-gradient-to-r from-indigo-400 to-indigo-300 shadow-xl">
-  <figure><LazyLoadImage src={picture} effect='blur' alt="Shoes" /></figure>
+  <figure><LazyLoadImage src={picture} effect='blur' alt="" /></figure>
   <div className="card-body">
     <h2 className="card-title">Chef Name: {name}</h2>
     <p>Experience: {experience}</p>

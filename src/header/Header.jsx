@@ -26,12 +26,14 @@ const Header = () => {
           user ? "" : <li><NavLink to="/register" className={({ isActive }) => (isActive ? 'text-blue-500' : '')}>Register</NavLink></li>
         }
         <li><NavLink to="/blogs" className={({ isActive }) => (isActive ? 'text-blue-500' : '')}>Blogs</NavLink></li>
-        <li>{
-      user ? <button onClick={handleLogOut} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Logout </button> : <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
-    }</li>
+        <li>
+      {
+        user?.displayName || user?.photoURL ? <button onClick={handleLogOut} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Logout </button> : <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
+      }
+    </li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl lg:text-2xl font-bold text-indigo-500">TOKYO KITCHEN</a>
+    <a className="btn btn-ghost normal-case -ml-8 md:-ml-0 text-xl lg:text-2xl font-bold text-indigo-500">TOKYO KITCHEN</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 font-semibold">
@@ -50,10 +52,10 @@ const Header = () => {
         </div> : ""
         }
       </label>
-  {
+    <div className="dropdown dropdown-end">
+    {
       user?.displayName || user?.photoURL ? <button onClick={handleLogOut} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Logout </button> : <Link to='/login'><button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md"> Login </button> </Link>
     }
-    <div className="dropdown dropdown-end">
     </div>
   </div>
 </div>

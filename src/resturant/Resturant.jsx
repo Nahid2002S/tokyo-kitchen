@@ -4,10 +4,10 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Resturant = () => {
     return (
-        <div>
+        <div className='px-2'>
             <h3 className='mt-16 text-center text-3xl font-semibold text-indigo-500'>Japanese Top Resturant</h3>
             <p className='mb-8 mt-2 text-center font-semibold text-indigo-500'>Japanese Resturants Are Very Clean An The Food Of Japanese <br /> Resturant is Very Healthy..</p>
-         <div className='grid lg:grid-cols-3 lg:px-12 px-2 gap-8 justify-center'>
+         <div className='grid w-96 lg:w-full mx-auto lg:grid-cols-3 lg:px-12 px-2 gap-8 justify-center'>
          <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
   <figure><LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-interior_1127-3394.jpg?w=740&t=st=1683109953~exp=1683110553~hmac=482db045753d685a98f5fa442e2f0a3b981890160a9365e9805f542eb9c4d5d2" alt="Shoes" /></figure>
   <div className="card-body">
@@ -19,7 +19,7 @@ const Resturant = () => {
     <button className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-indigo-800 to-indigo-500 shadow:md mt-2">Explore</button>
   </div>
 </div>
-            <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
+  <div className="card w-96 bg-base-100 shadow-xl bg-gradient-to-r from-indigo-400 to-indigo-300">
   <figure><LazyLoadImage effect='blur' src="https://img.freepik.com/free-photo/restaurant-hall-with-red-brick-walls-wooden-tables-pipes-ceiling_140725-8504.jpg?w=740&t=st=1683110860~exp=1683111460~hmac=208dbbb43761384d3db8c5d1256ea34fcbc622f341f43a3cf27190cd5313ac55" alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
