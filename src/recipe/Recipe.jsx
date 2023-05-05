@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Recipe = ({recipe}) => {
     const {name, ingredients, picture, making_details, rating, id} = recipe;
+    const [disable,setDisable] = useState(false);
 
-    const addToFavourite = (event) =>{
+    const addToFavourite = () =>{
       toast('The recipe is your favorite');
-      event.currentTarget.disabled = true;
+      setDisable(true);
     }
     return (
         <div>
@@ -23,7 +24,8 @@ const Recipe = ({recipe}) => {
     <p><span className='font-semibold'>Cooking Method:</span> {making_details}</p>
     <p><span className='font-semibold'>Rating:</span> {rating}</p>
     <div className="card-actions">
-    <button onClick={addToFavourite} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-pink-500 to-indigo-600 shadow:md"> Favourite </button>
+    {
+      !disable ? <button onClick={addToFavourite} className="px-6 py-2 text-purple-100 rounded bg-gradient-to-r from-pink-500 to-indigo-600 shadow:md"> Favourite </button> : <button className="px-6 py-2 text-purple-100 rounded bg-gray-600 shadow:md" disabled> Favourite </button>}
     </div>
   </div>
 </div>
