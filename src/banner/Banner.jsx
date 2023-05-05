@@ -1,5 +1,5 @@
 import React from 'react';
-import Chefs from '../chefs/chefs';
+import Chefs from '../chefs/Chefs';
 import Header from '../header/Header';
 import banner from '../assets/banner.jpg'
 import plate from '../assets/plates.png'
